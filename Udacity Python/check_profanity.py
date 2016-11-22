@@ -1,4 +1,4 @@
-import urllib
+import urllib.parse
 
 
 def read_txt():
@@ -10,9 +10,12 @@ def read_txt():
 
 
 def check_profanity(text_to_check):
-    connection = urllib.request.OpenerDirector("http://www.wdylike.appspot.com/?q="+text_to_check)
-    output = connection.read()
-    print(output)
-    connection.close()
-
+    url = 'http://www.wdylike.appspot.com'
+    values = {'q' : text_to_check}
+    data = urllib.parse.urlencode(values)
+    data = data.encode('utf-8') # data should be bytes
+    req = urllib.request.Request(url, data)
+    resp = urllib.request.urlopen(req)
+    respData = resp.read()
+    
 read_txt()
