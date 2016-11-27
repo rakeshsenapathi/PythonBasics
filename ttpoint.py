@@ -105,6 +105,15 @@ for letter in 'Python':
 
 print ("Good bye!")
 
+"""Iterator is an object which allows a programmer to traverse through all the elements of a collection, regardless of its specific implementation.
+In Python iterator object implements two methods : iter() and next()"""
+
+the_list=[1,2,3,4]
+it = iter(the_list) # this builds an iterator object
+#print (next(it)) #prints next available element in iterator
+
+for each_element in it:
+	print (each_element, end= " ") #end is used to avoid default new line with each iteration
 
 
     
