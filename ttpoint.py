@@ -128,5 +128,21 @@ def square_generator(no):
              yield (i*i)
 
 result = square_generator([1, 2, 3, 4, 5])
+print("Using Generator Function")
 for i in result:
     print(i)
+
+""" List Comprehension: It can be used to construct lists in a very natural, easy way, like a mathematician is used to do."""
+print("List Comprehension")
+s= [x*x for x in range(5)]
+print(s)
+
+""" Iterating by index """
+# Taking previously initiated the_list
+length = len(the_list)
+print("Iterating by Index")
+for i in range(0,length):
+    print(the_list[i], end =" ")
+
+print("")
+
