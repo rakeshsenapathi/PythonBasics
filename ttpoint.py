@@ -34,28 +34,28 @@ print(tuple)
 
 """ Python dictionary: There are similar to hash tables i.e key and value pairs """
 my_dictionary = {
- 	               1 : "Number 1",
- 	               2 : "Number 2",
- 	               "three" : 3
-                }
+    1: "Number 1",
+    2: "Number 2",
+    "three": 3
+}
 print(my_dictionary["three"])
 
 """ Data type conversions """
-#int 
+# int
 x = int(17.2)
 print(x)
 
 """ Some of Python Arithmetic Operators """
 
-#Division
-d = 4/3
-print(d) #The output can result a float point, for this floor division can be used
+# Division
+d = 4 / 3
+print(d)  # The output can result a float point, for this floor division can be used
 
-#Floor Division
-f = 4//3
-print(f) #returns floor value
+# Floor Division
+f = 4 // 3
+print(f)  # returns floor value
 
-#Exponent
+# Exponent
 e = 4**2
 print(e)
 
@@ -65,60 +65,68 @@ print(e)
 
 a = 20
 b = 20
-print ('Line 1','a=',a,':',id(a), 'b=',b,':',id(b))
+print('Line 1', 'a=', a, ':', id(a), 'b=', b, ':', id(b))
 
-if ( a is b ):
-   print ("Line 2 - a and b have same identity")
+if (a is b):
+    print("Line 2 - a and b have same identity")
 else:
-   print ("Line 2 - a and b do not have same identity")
+    print("Line 2 - a and b do not have same identity")
 
-if ( id(a) == id(b) ):
-   print ("Line 3 - a and b have same identity")
+if (id(a) == id(b)):
+    print("Line 3 - a and b have same identity")
 else:
-   print ("Line 3 - a and b do not have same identity")
+    print("Line 3 - a and b do not have same identity")
 
 b = 30
-print ('Line 4','a=',a,':',id(a), 'b=',b,':',id(b))
+print('Line 4', 'a=', a, ':', id(a), 'b=', b, ':', id(b))
 
-if ( a is not b ):
-   print ("Line 5 - a and b do not have same identity")
+if (a is not b):
+    print("Line 5 - a and b do not have same identity")
 else:
-   print ("Line 5 - a and b have same identity")
-# In python here 20 object is created and assigned to variable and when it changes to 20 the id() value also changes. It's execution varies from others.
+    print("Line 5 - a and b have same identity")
+# In python here 20 object is created and assigned to variable and when it
+# changes to 20 the id() value also changes. It's execution varies from
+# others.
 
 """ Loop Statements:
     Python supports the following Control Statements 1) break 2) continue 3) pass """
-#Continue statement
+# Continue statement
 for letter in 'Python':
-   if letter == 'h':
-      continue
-   print ('Current Letter :', letter)
+    if letter == 'h':
+        continue
+    print('Current Letter :', letter)
 
 """Pass statement: It is a null operation, it does execute anything but is rather used to acheive syntactical correctness. It simple acts as a 
 place holder for the methods et cetera, which are not yet there"""
 
-for letter in 'Python': 
-   if letter == 'h':
-      pass
-      print ('This is pass block')
-   print ('Current Letter :', letter)
+for letter in 'Python':
+    if letter == 'h':
+        pass
+        print('This is pass block')
+    print('Current Letter :', letter)
 
-print ("Good bye!")
+print("Good bye!")
 
-"""Iterator is an object which allows a programmer to traverse through all the elements of a collection, regardless of its specific implementation.
+""" Iterator:
+Iterator is an object which allows a programmer to traverse through all the elements of a collection, regardless of its specific implementation.
 In Python iterator object implements two methods : iter() and next()"""
 
-the_list=[1,2,3,4]
-it = iter(the_list) # this builds an iterator object
-#print (next(it)) #prints next available element in iterator
-
+the_list = [1, 2, 3, 4]
+it = iter(the_list)  # this builds an iterator object
 for each_element in it:
-	print (each_element, end= " ") #end is used to avoid default new line with each iteration
+    # end is used to avoid default new line with each iteration
+    print(each_element, end=" ")
 
+""" Generator:
+A generator is a function that produces or yields a sequence of values using yield method."""
+# Program to return square of numbers using generator_function
 
-    
+print("")
 
+def square_generator(no):
+    for i in no:
+             yield (i*i)
 
-
-
-
+result = square_generator([1, 2, 3, 4, 5])
+for i in result:
+    print(i)
