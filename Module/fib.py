@@ -11,3 +11,6 @@ def fib_gen(number):
 
 def main():
 	print("We are in", __name__)
+
+if(__name__ == '__main__'):
+	print("This is executed in __main__")
