@@ -14,7 +14,9 @@ soup = BeautifulSoup(html_content.read(), "html.parser")
 
 links = soup.find_all('a')
 
-file = open("wallpaper_links.txt","w")
+# soup.prettify to get well structured code
+
+file = open("wallpaper_links.txt", "w")
 
 """ # to extract all the urls through anchor tags 
 for link in links:
@@ -23,8 +25,8 @@ for link in links:
 image_links = soup.find_all('div', class_="thumb")
 
 for image_link in image_links:
-	for each_it in image_link:
-		print("Writing:",each_it.text)
-		file.write(url+each_it.get("href")+"\n")
+    for each_it in image_link:
+        print("Writing:", each_it.text)
+        file.write(url + each_it.get("href") + "\n")
 
 file.close()
