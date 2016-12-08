@@ -8,7 +8,7 @@ import validators
 
 from bs4 import BeautifulSoup
 
-url = "https://www.facebook.com/"
+# url = "http://www.facets.la/"
 
 req = urllib.request.urlopen(url)
 

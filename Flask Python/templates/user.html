@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+{% if user %}
+  <body bgcolor="#c0392b" style="align-content: center;">
+  <h1 style="font-family: 'Roboto', sans-serif;"> Hello {{ user }} </h1> </body>
+{% else %}
+  <body>
+  <h1> Please Log In </h1> </body>
+{% endif %}
