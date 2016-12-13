@@ -25,8 +25,7 @@ def wicket_lookup():
 
 	score = list(score_tray[1].text)
 
-	# print(score[33])
-	if(score[33] == "W"):
+	if(score[len(score)-2] == "W"):
 		app = Qt.QApplication(sys.argv)
 		systemtray_icon = Qt.QSystemTrayIcon()
 		systemtray_icon.show()
