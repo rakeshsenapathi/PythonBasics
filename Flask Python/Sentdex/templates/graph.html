@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block body %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap.min.js"></script>
+<div id={{ chartID|safe }} class="chart" style="height: 100px"></div>
+<script>
+  var chart_id = {{ chartID|safe }}
+  var series = {{ series|safe }}
+  var title = {{ title|safe }}
+  var xAxis = {{ xAxis|safe }}
+  var yAxis = {{ yAxis|safe }}
+  var chart = {{ chart|safe }}
+</script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="/static/graph.js">
+</script>
+{% endblock %}
