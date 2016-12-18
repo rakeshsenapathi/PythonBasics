@@ -5,8 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	page_type = "index"
-	return render_template("index.html", page_type = page_type)
+    page_type = "index"
+    return render_template("index.html", page_type=page_type)
+
 
 @app.route('/graph')
 def graph(chartID='chart_ID', chart_type='line', chart_height=500):
@@ -23,11 +24,10 @@ def graph(chartID='chart_ID', chart_type='line', chart_height=500):
 def about():
     return render_template('about.html')
 
+
 @app.errorhandler(404)
 def page_not_found(e):
-	return render_template("404error.html")
-
-
+    return render_template("404error.html")
 
 
 if(__name__ == "__main__"):
