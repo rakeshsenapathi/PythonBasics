@@ -1,0 +1,7 @@
+1 Flat# 101 Occupied Rent:10000
+
+2 Flat# 202 Vacant Rent: 20000
+
+3 Flat# 305 Occupied Rent: 15000
+
+4 Flat# 405 Vacant Rent 8000
