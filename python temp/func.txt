@@ -1,0 +1,21 @@
+function clicked(){
+    var screenName = document.getElementById("usr_name").value;
+    if(screenName.length == 0){
+      alert("Empty!");
+    }
+    else{
+      alert("Data entered");
+      $.ajax({
+        url  : '/screenName',
+        data : $('usr_name').serialize(),
+        type : 'POST',
+        success : function(response){
+                 console.log(response);
+            },
+
+            error: function(error) {
+                console.log(error);
+            }
+      });
+    }
+  }

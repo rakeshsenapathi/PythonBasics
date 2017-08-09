@@ -1,0 +1,3 @@
+ProductType: Soaps Location:FirstFloor Rack:20
+ProductType: RefinedOils Location:FirstFloor Rack:30
+ProductType: KIDS Location:SecondFloor Rack:20
